@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="./less/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">{{name}}</span>
+            <div class="mdl-layout-spacer"></div>
+            <span data-userhash="{{userhash}}" id="timer" class="mdl-layout-title">04:00:00</span>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">
+            <div class="logo_company">
+                <div>Wellsoft</div>
+                <div><i class="material-icons">done</i>Tests</div>
+            </div>
+        </span>
+        <ul class="mdl-list">
+            <li class="mdl-list__item mdl-js-button mdl-js-ripple-effect active">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">view_week</i>
+                    Задача 1
+                </span>
+            </li>
+            <li class="mdl-list__item mdl-js-button mdl-js-ripple-effect">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">brush</i>
+                    Задача 2
+                </span>
+            </li>
+            <li class="mdl-list__item mdl-js-button mdl-js-ripple-effect">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">vertical_align_center</i>
+                    Задача 3
+                </span>
+            </li>
+            <li class="mdl-list__item mdl-js-button mdl-js-ripple-effect">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">flag</i>
+                    Задача 4
+                </span>
+            </li>
+            <li class="mdl-list__item mdl-js-button mdl-js-ripple-effect">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">error</i>
+                    Задача 5
+                </span>
+            </li>
+            <li class="mdl-list__item mdl-js-button mdl-js-ripple-effect">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">view_compact</i>
+                    Задача 6
+                </span>
+            </li>
+        </ul>
+    </div>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel" style="display: block;">
+            <div class="page-content task1">
+                <h4>Дырки в inline-block</h4>
+                <div class="desc_text"><strong>Задача:</strong> Убрать дырки</div>
+                <div class="desc_text">
+                    <strong>Описание:</strong> <br>
+                    <i>Вам представленно стандартное поведение inline-block, задача заключается в том, что бы показать один или несколько примеров, как избавиться от промежутков. Будем плюсом, если опишите почему это происходит.</i>
+                </div>
+                <div class="desc_text">
+                    <strong>Исходный вид:</strong>
+                </div>
+                <div class="container">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+                <div class="desc_text">
+                    <strong>Исходный код:</strong>
+                </div>
+                <div class="code_cover">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <xmp>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+                        </xmp>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <xmp>
+    .container{
+        background: lightgray;
+        width: 100%;
+    }
+    .container .item{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+                        </xmp>
+                    </div>
+                </div>
+                <div class="desc_text">
+                    <strong>Решение:</strong>
+                </div>
+                <form data-userhash="{{hash}}" data-task="1">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <div class="code_input_cover code_cover_html">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <div class="code_input_cover code_cover_css">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Комментарий</span>
+                        </span>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3"></textarea>
+                            <label class="mdl-textfield__label" for="sample5"></label>
+                        </div>
+                    </div>
+                    <div class="btn_cover">
+                        <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Отправить</div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" style="display: none;">
+            <div class="page-content task2">
+                <h4>Псевдоклассы</h4>
+                <div class="desc_text"><strong>Общая задача:</strong> Расскрасить элементы в синий цвет</div>
+                <div class="desc_text">
+                    <strong>Описание:</strong><br>
+                    <i>Расскрасить элементы в синий цвет (#00f;)</i>
+                </div>
+
+                <div class="desc_text">
+                    <strong>Исходный вид:</strong>
+                </div>
+                <div class="container">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+                <div class="desc_text">
+                    <strong>Исходный код:</strong> Код одинаков в каждом случае
+                </div>
+                <div class="code_cover">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <xmp>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+                        </xmp>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <xmp>
+    .container{
+        width: 100%;
+    }
+    .container .item{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+                        </xmp>
+                    </div>
+                </div>
+
+                <div class="desc_text">
+                    <strong>Задача 1:</strong> Разукрасить первый элемент
+                </div>
+                <div class="desc_text">
+                    <strong>Пример:</strong>
+                    <br/>
+                    <img width="200px" src="/images/2-1.png" alt="">
+                </div>
+
+                <div class="desc_text">
+                    <strong>Решение:</strong>
+                </div>
+                <form data-userhash="{{hash}}" data-task="2">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <div class="code_input_cover code_cover_css">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Комментарий</span>
+                        </span>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3"></textarea>
+                            <label class="mdl-textfield__label" for="sample5"></label>
+                        </div>
+                    </div>
+                    <div class="btn_cover">
+                        <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Отправить</div>
+                    </div>
+                </form>
+
+                <div class="desc_text">
+                    <strong>Задача 2:</strong> Разукрасить последний элемент
+                </div>
+                <div class="desc_text">
+                    <strong>Пример:</strong>
+                    <br/>
+                    <img width="200px" src="/images/2-2.png" alt="">
+                </div>
+
+                <div class="desc_text">
+                    <strong>Решение:</strong>
+                </div>
+                <form data-userhash="{{hash}}" data-task="3">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <div class="code_input_cover code_cover_css">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Комментарий</span>
+                        </span>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3"></textarea>
+                            <label class="mdl-textfield__label" for="sample5"></label>
+                        </div>
+                    </div>
+                    <div class="btn_cover">
+                        <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Отправить</div>
+                    </div>
+                </form>
+
+                <div class="desc_text">
+                    <strong>Задача 3:</strong> Разукрасить элементы начиная с 3й и все последующие
+                </div>
+                <div class="desc_text">
+                    <strong>Пример:</strong>
+                    <br/>
+                    <img width="200px" src="/images/2-3.png" alt="">
+                </div>
+
+                <div class="desc_text">
+                    <strong>Решение:</strong>
+                </div>
+                <form data-userhash="{{hash}}" data-task="4">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <div class="code_input_cover code_cover_css">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Комментарий</span>
+                        </span>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3"></textarea>
+                            <label class="mdl-textfield__label" for="sample5"></label>
+                        </div>
+                    </div>
+                    <div class="btn_cover">
+                        <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Отправить</div>
+                    </div>
+                </form>
+
+                <div class="desc_text">
+                    <strong>Задача 4:</strong> Разукрасить первые 3 элемента
+                </div>
+                <div class="desc_text">
+                    <strong>Пример:</strong>
+                    <br/>
+                    <img width="200px" src="/images/2-4.png" alt="">
+                </div>
+
+                <div class="desc_text">
+                    <strong>Решение:</strong>
+                </div>
+                <form data-userhash="{{hash}}" data-task="5">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <div class="code_input_cover code_cover_css">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Комментарий</span>
+                        </span>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3"></textarea>
+                            <label class="mdl-textfield__label" for="sample5"></label>
+                        </div>
+                    </div>
+                    <div class="btn_cover">
+                        <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Отправить</div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" style="display: none;">
+            <div class="page-content task3">
+                <h4>Центрирование</h4>
+                <div class="desc_text"><strong>Задача:</strong> Отцентрируйте по вертикали и горизонтали</div>
+                <div class="desc_text">
+                    <strong>Описание:</strong> <br>
+                    <i>Можно представить один или более вариантов решения, всё должно быть обязательно адаптивно.</i>
+                </div>
+                <div class="desc_text">
+                    <strong>Исходный вид:</strong>
+                    <div class="container">
+                        <div class="item"></div>
+                    </div>
+                </div>
+                <div class="desc_text">
+                    <strong>Исходный код:</strong>
+                </div>
+                <div class="code_cover">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <xmp>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+                        </xmp>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <xmp>
+    .container{
+        background: #ccc;
+        width: 200px;
+        height: 300px;
+    }
+    .container .item{
+        background: red;
+        width: 70px;
+        height: 70px;
+    }
+                        </xmp>
+                    </div>
+                </div>
+                <div class="desc_text">
+                    <strong>Решение:</strong>
+                </div>
+                <form data-userhash="{{hash}}" data-task="6">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <div class="code_input_cover code_cover_html">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <div class="code_input_cover code_cover_css">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Комментарий</span>
+                        </span>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3"></textarea>
+                            <label class="mdl-textfield__label" for="sample5"></label>
+                        </div>
+                    </div>
+                    <div class="btn_cover">
+                        <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Отправить</div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" style="display: none;">
+            <div class="page-content task4">
+                <h4>Флаг</h4>
+                <div class="desc_text"><strong>Задача:</strong> Заверстать флаг</div>
+                <div class="desc_text">
+                    <strong>Описание:</strong><br>
+                    <i>Использовать в данной задаче только css и html. Не нужно вставлять просто img или svg.</i><br>
+                </div>
+                <div class="desc_text">
+                    <strong>Макет:</strong> <br>
+                    <img width="320px" src="/images/guyana.svg" alt="">
+                </div>
+                <div class="desc_text">
+                    <strong>Решение:</strong>
+                </div>
+                <form data-userhash="{{hash}}" data-task="7">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <div class="code_input_cover code_cover_html">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <div class="code_input_cover code_cover_css">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Комментарий</span>
+                        </span>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3"></textarea>
+                            <label class="mdl-textfield__label" for="sample5"></label>
+                        </div>
+                    </div>
+                    <div class="btn_cover">
+                        <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Отправить</div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" style="display: none;">
+            <div class="page-content task5">
+                <h4>Вывод ошибки</h4>
+                <div class="desc_text"><strong>Задача:</strong> Привести данный блок к макету</div>
+                <div class="desc_text">
+                    <strong>Описание:</strong><br>
+                    <i>"Твой рабочий день подходит к концу, ты уже собираешься домой и неспеша дописываешь сообщение к коммиту. Сегодня ты отлично поработал! Ты замечаешь, что менеджер идет к тебе. "Не к добру" - думаешь ты. И верно! Оказалось, что нужно срочно поправить верстку ошибки Email-а. Кто-то криво обновил проект и восстановить код уже невозможно :( Ты берешь волю в кулак и собираешься показать менеджеру чего ты стоишь!"</i><br>
+                </div>
+                <div class="desc_text">
+                    <strong>Макет:</strong> <br>
+                    <img width="300px" src="/images/3-1.png" alt="">
+                </div>
+                <div class="desc_text">
+                    <strong>Исходный вид:</strong>
+                    <div class="error">
+                        <input type="text" value="test@test">
+                        <span class="error_label">Некорректный e-mail</span>
+                    </div>
+                </div>
+                <div class="desc_text">
+                    <strong>Исходный код:</strong>
+                </div>
+                <div class="code_cover">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <xmp>
+    <div class="error">
+        <input type="text" value="test@test">
+        <span class="error_label">
+            Некорректный e-mail
+        </span>
+    </div>
+                        </xmp>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <xmp>
+    input{
+        padding: 5px 10px;
+        border: 1px solid #d9d9d9;
+    }
+                        </xmp>
+                    </div>
+                </div>
+
+                <div class="desc_text">
+                    <strong>Решение:</strong>
+                </div>
+                <form data-userhash="{{hash}}" data-task="8">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <div class="code_input_cover code_cover_html">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <div class="code_input_cover code_cover_css">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Комментарий</span>
+                        </span>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3"></textarea>
+                            <label class="mdl-textfield__label" for="sample5"></label>
+                        </div>
+                    </div>
+                    <div class="btn_cover">
+                        <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Отправить</div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" style="display: none;">
+            <div class="page-content task6">
+                <h4>Layouts</h4>
+                <div class="desc_text"><strong>Задача:</strong> Сверстать layout страницы. Предполагается, что Футер и Хедер занимают 50px, Навигация зафиксированна 200px, Контент адаптивный. Так же страница всегда занимает всю высоту экрана, Футер всегда внизу страницы. Размер шрифта 16px. Картинка для использования 80х80, используйте https://picsum.photos/80/80 <br>
+                    Можно сделать верстку полностью на свой вкус и HTML и CSS. Так же можно "сделать красиво". <br> <a href="./images/maket.png" download>Скачать файл макета <i style="vertical-align: middle" class="material-icons">get_app</i></a>
+                </div>
+                <div class="desc_text">
+                    <strong>Описание:</strong><br>
+                    <i>"Шапка, футер, навигация, контент? Что все это значит?" <br> Дело в том что новый дизайнер с необычным вкусом, нарисовал макет. Вы слышали, что он не различает цвета (но это не точно). Он очень старался, поэтому просил сохранить авторский замысел на 100%. И вы конечно же сохраните. Только немного изменив, ведь со вкусом у вас тоже все впорядке.</i>
+                </div>
+                <div class="desc_text">
+                    <strong>Исходный вид:</strong>
+                    <div class="container">
+                        <div class="header">Шапка</div>
+                        <div class="nav">Навигация</div>
+                        <div class="content">Контент</div>
+                        <div class="footer">Футер</div>
+                    </div>
+
+                    <!--<div class="container2">
+                        <div class="header">Шапка</div>
+                        <div class="content_cover">
+                            <div class="nav">Навигация</div>
+                            <div class="content">
+                                Контент
+                                <br><br>
+                                <div class="item">Текст</div>
+                                <div class="item image_cover">
+                                    <img src="https://picsum.photos/80/80">
+                                </div>
+                                <div class="item">Текст</div>
+                            </div>
+                        </div>
+                        <div class="footer">Футер</div>
+                    </div>-->
+                </div>
+                <div class="desc_text">
+                    <strong>Исходный код:</strong>
+                </div>
+                <div class="code_cover">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <xmp>
+    <div class="container">
+        <div class="header">Шапка</div>
+        <div class="nav">Навигация</div>
+        <div class="content">Контент</div>
+        <div class="footer">Футер</div>
+    </div>
+                        </xmp>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <xmp>
+    .container{
+        background: #ccc;
+        width: 600px;
+        height: 300px;
+    }
+    .header{
+        background: #4a0072;
+        color: #fff;
+        font-weight: bold;
+    }
+    .nav{
+        background: #9a0007;
+    }
+    .content{
+        background: #bb002f;
+    }
+    .footer{
+        background: #f50057;
+        font-weight: bold;
+        color: #fff;
+    }
+                        </xmp>
+                    </div>
+                </div>
+                <div class="desc_text">
+                    <strong>Решение:</strong>
+                </div>
+                <form data-userhash="{{hash}}" data-task="9">
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">HTML</span>
+                        </span>
+                        <div class="code_input_cover code_cover_html">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">CSS</span>
+                        </span>
+                        <div class="code_input_cover code_cover_css">
+                            <div class="code_input"></div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Комментарий</span>
+                        </span>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3"></textarea>
+                            <label class="mdl-textfield__label" for="sample5"></label>
+                        </div>
+                    </div>
+                    <div class="btn_cover">
+                        <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Отправить</div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="./scripts/material.js"></script>
+<script src="./scripts/jquery-3.3.1.min.js"></script>
+<script src="./scripts/codeflask.min.js"></script>
+<script src="./scripts/main.js"></script>
+</body>
+</html>

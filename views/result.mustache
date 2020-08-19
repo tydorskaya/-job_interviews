@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="/less/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel" style="display: block;">
+            <div class="page-content">
+               {{#result}}
+                   <p>{{html}}</p>
+                   <p>{{css}}</p>
+                   <p>{{comment}}</p>
+               {{/result}}
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="/scripts/material.js"></script>
+<!--<script src="./scripts/jquery-3.3.1.min.js"></script>-->
+<script src="/scripts/codeflask.min.js"></script>
+<!--<script src="./scripts/main.js"></script>-->
+</body>
+</html>

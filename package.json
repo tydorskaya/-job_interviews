@@ -1,0 +1,26 @@
+{
+  "name": "testwell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "devstart": "nodemon -e mustache,js server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/damir_ja/testwell.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/damir_ja/testwell#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mustache": "^3.0.1",
+    "mustache-express": "^1.2.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}

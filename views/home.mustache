@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="./less/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Здравствуйте, {{name}}</span>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">
+            <div class="logo_company">
+                <div>Wellsoft</div>
+                <div><i class="material-icons">done</i>Tests</div>
+            </div>
+        </span>
+    </div>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel" style="display: block;">
+            <div class="page-content">
+                <h4>Добро пожаловать, Вам предстоит пройти тестовое задание</h4>
+                <div class="desc_text">
+                    <i>Тестовое задание состоит из 6 вопросов, порядок выполнения не важен, результатом является последнее отправленое изменение, время ограничено. Удачи</i>
+                </div>
+                <div class="desc_text">
+                    <a id="startTimer" data-userhash="{{userhash}}" class="mdl-button" href="/{{userhash}}">Начать</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="./scripts/material.js"></script>
+<script src="./scripts/jquery-3.3.1.min.js"></script>
+<script src="./scripts/codeflask.min.js"></script>
+<script src="./scripts/main.js"></script>
+</body>
+</html>
